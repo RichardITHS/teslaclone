@@ -9,10 +9,13 @@ function Section() {
                 <h1>Model 3</h1>
                 <p>Leasing starting at $349/mo</p>
             </ItemText>
+            <Buttons>
             <ButtonGroup>
                 <LeftButton>View Inventory</LeftButton>
                 <RightButton>Custom Order</RightButton>
             </ButtonGroup>
+            </Buttons>
+            <DownArrow><svg xmlns='http://www.w3.org/2000/svg' fill="black" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg></DownArrow>
 
 
         </Wrap>
@@ -58,4 +61,15 @@ margin: 8px;
 const RightButton = styled(LeftButton)`
 background-color: rgba(244, 244, 244, 1);
 color:black;
+`
+const DownArrow = styled.div`
+height: 40px;
+margin-top: 20px;
+margin-bottom:2vh;
+width: 40px;
+animation: animateDown infinite 1.5s;
+
+`
+const Buttons = styled.div`
+margin-top: 60vh;
 `
