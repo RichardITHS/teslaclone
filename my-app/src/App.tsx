@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import { Link, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Home from './Home'
+import About from './About'
 
 function App() {
     return (
@@ -33,6 +34,12 @@ function App() {
                             </Link>
                         </Nav>
                         <Nav>
+                        <Link id="Nav.Link" to={'/'}>
+                                Model Y
+                            </Link>
+                            <Link id="Nav.Link" to={'/about'}>
+                                About
+                            </Link>
                         </Nav>
 
 
@@ -41,6 +48,7 @@ function App() {
             </Navbar>
             <Routes>
                 <Route path="/" element={<Home />}/>
+                <Route path="/about" element={<About />}/>
             </Routes>
 
         </div>
