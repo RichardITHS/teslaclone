@@ -9,6 +9,10 @@ function Section() {
                 <h1>Model 3</h1>
                 <p>Leasing starting at $349/mo</p>
             </ItemText>
+            <ButtonGroup>
+                <LeftButton>View Inventory</LeftButton>
+                <RightButton>Custom Order</RightButton>
+            </ButtonGroup>
 
 
         </Wrap>
@@ -25,7 +29,15 @@ height:100vh;
 display: flex;
 background-position: center;
 background-size: cover;
+align-items: center;
+flex-direction: column;
+justify-content: space-between;
 `
 const ItemText = styled.div`
+padding-top:15vh ;
+text-align: center;
+`
+
+const ButtonGroup = styled.div`
 
 `
