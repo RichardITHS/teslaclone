@@ -33,3 +33,22 @@ code {
 
 
 }
+
+/* Navbar */
+.logo{
+    height:40px;
+}
+
+#root > div > nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent!important;
+}
+
+#Nav\.Link{
+    text-decoration: none;
+    color:black;
+    font-size: 14px;
+    margin:10px;
+
+}

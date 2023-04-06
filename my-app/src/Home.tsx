@@ -1,9 +1,10 @@
 import React from 'react'
 import Section from './Section'
+import styled from 'styled-components'
 
 function Home() {
   return (
-    <div>
+    <Container>
         <Section
         title={'Model 3'}
         description={'Leasing starting at $349/mo'}
@@ -45,8 +46,13 @@ function Home() {
 
         />
 
-    </div>
+    </Container>
   )
 }
 
 export default Home
+
+const Container = styled.div`
+margin-top:-10vh;
+
+`
