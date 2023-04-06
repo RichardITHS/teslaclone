@@ -6,7 +6,7 @@ function Section({title, description, bgImg, LButton, RButton}) {
     <div>
         <Wrap bgImg={bgImg}>
             <ItemText>
-                <h1>{title}</h1>
+                <h1>{title}</h1>    
                 <p>{description}</p>
             </ItemText>
             <Buttons>
