@@ -4,7 +4,7 @@ import {createSlice} from '@reduxjs/toolkit'
 
 //Skapar ett state
 const initialState = {
-    car: ["Model 3" , "Model Y", "Model S", "Model X", "Solar Roof"]
+    cars: ["Model 3" , "Model Y", "Model S", "Model X", "Solar Roof"]
 }
 
 //Skapar en slice

@@ -28,7 +28,7 @@ export default Section
 
 const Wrap = styled.div`
 background-image:${(props) => `url("images/${props.bgImg}")`} ;
-height:100vh;
+height:120vh;
 display: flex;
 background-position: center;
 background-size: cover;
@@ -44,7 +44,7 @@ text-align: center;
 const ButtonGroup = styled.div`
 display: flex;
 justify-content: center;
-//Wrap
+flex-wrap: wrap;
 `
 const LeftButton = styled.div`
 background-color: rgba(23, 26, 32, 0.8);

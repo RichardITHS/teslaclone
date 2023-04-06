@@ -52,3 +52,10 @@ code {
     margin:10px;
 
 }
+
+@media only screen and (max-width: 768px){
+   #responsive-navbar-nav{
+        height:60vh;
+    }
+
+}

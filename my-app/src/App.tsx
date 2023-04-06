@@ -7,8 +7,12 @@ import { Link, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Home from './Home'
 import About from './About'
+import { useSelector } from 'react-redux'
+import { selectCars } from './features/menu/carSlice'
 
 function App() {
+    const cars = useSelector(selectCars)
+
     return (
         <div className="App">
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -23,34 +27,28 @@ function App() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Link id="Nav.Link" to={'/'}>
-                                Model 3
-                            </Link>
-                            <Link id="Nav.Link" to={'/'}>
-                                Model Y
-                            </Link>
-                            <Link id="Nav.Link" to={'/'}>
-                                Model S
-                            </Link>
+                            {cars &&
+                                cars.map((car: string, index: string) => (
+                                    <Link key={index} id="Nav.Link" to={'/'}>
+                                        {car}
+                                    </Link>
+                                ))}
                         </Nav>
                         <Nav>
-                        <Link id="Nav.Link" to={'/'}>
+                            <Link id="Nav.Link" to={'/'}>
                                 Model Y
                             </Link>
                             <Link id="Nav.Link" to={'/about'}>
                                 About
                             </Link>
                         </Nav>
-
-
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
             <Routes>
-                <Route path="/" element={<Home />}/>
-                <Route path="/about" element={<About />}/>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
             </Routes>
-
         </div>
     )
 }
