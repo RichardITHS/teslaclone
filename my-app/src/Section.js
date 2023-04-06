@@ -1,18 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Section() {
+function Section({title, description, bgImg, LButton, RButton}) {
   return (
     <div>
-        <Wrap>
+        <Wrap bgImg={bgImg}>
             <ItemText>
-                <h1>Model 3</h1>
-                <p>Leasing starting at $349/mo</p>
+                <h1>{title}</h1>
+                <p>{description}</p>
             </ItemText>
             <Buttons>
             <ButtonGroup>
-                <LeftButton>View Inventory</LeftButton>
-                <RightButton>Custom Order</RightButton>
+                <LeftButton>{LButton}</LeftButton>
+                <RightButton>{RButton}</RightButton>
             </ButtonGroup>
             </Buttons>
             <DownArrow><svg xmlns='http://www.w3.org/2000/svg' fill="black" focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg></DownArrow>
@@ -27,7 +27,7 @@ function Section() {
 export default Section
 
 const Wrap = styled.div`
-background: url('/images/Homepage-Model-3-Desktop-LHD.jpeg');
+background-image:${(props) => `url("images/${props.bgImg}")`} ;
 height:100vh;
 display: flex;
 background-position: center;
