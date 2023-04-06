@@ -39,5 +39,23 @@ text-align: center;
 `
 
 const ButtonGroup = styled.div`
-
+display: flex;
+justify-content: center;
+//Wrap
+`
+const LeftButton = styled.div`
+background-color: rgba(23, 26, 32, 0.8);
+align-items: center;
+color: white;
+text-align: center;
+padding: 10px 80px;
+border-radius: 5px;
+font-size: 14px;
+cursor: pointer;
+display: flex;
+margin: 8px;
+`
+const RightButton = styled(LeftButton)`
+background-color: rgba(244, 244, 244, 1);
+color:black;
 `
